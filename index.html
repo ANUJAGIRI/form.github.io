@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>   
+    <div class="container">
+        
+        <form action="content.php" method="post"  id="form1" >
+            <h3>Simple Form</h3>
+            <input type="text" name="name" placeholder="Your name..">
+            <input type="number" name="age" placeholder="Your age..">
+            <input type="number" name="weight" placeholder="Your weight..">
+            <input type="email" name="email" placeholder="Your email id..">
+            <input type="file" name="health_report" accept=".pdf">
+            <div class="btn-box">
+                <button type="button" id="next1">next</button>
+            </div>
+          </form>
+          <form id="form2">
+            <h3>personal details</h3>
+            <input type="education"  placeholder="education..">
+            <input type="number"  placeholder="contact number..">
+            <input type="text" placeholder="Your address..">
+            <input type="submit" value="Submit">
+             <div class="btn-box">
+                <button type="button" id="back1">back</button>
+                <button type="button" id="next2">next</button>
+            </div>
+          </form>
+          <form id="form3">
+            <h3>Thank You</h3>
+            <div class="btn-box">
+                <button type="button" id="back2">back</button>
+                <button type="button" id="submit2">submit</button>
+            </div>
+        </form>
+          <div class="step-row">
+            <div id="progress"></div>
+          <div class="step-col">step1</div>
+          <div class="step-col">step2</div>
+          <div class="step-col">step3</div>
+        </div>
+    </div>
+<script>
+    var form1 = document.getElementById("form1");
+    var form2 = document.getElementById("form2");
+    var form3 = document.getElementById("form3");
+
+    var next1 = document.getElementById("next1");
+    var next2 = document.getElementById("next2");
+    var back1 = document.getElementById("back1");
+    var back2 = document.getElementById("back2");
+
+    var progress = document.getElementById("progress");
+    
+
+    next1.onclick=function(){
+        form1.style.left= "-450px";
+        form2.style.left="40px";
+        progress.style.width="240px";
+    }
+    back1.onclick=function(){
+        form1.style.left= "50px";
+        form2.style.left="450px";
+        progress.style.width="120px";
+    }
+
+    next2.onclick=function(){
+        form2.style.left= "-450px";
+        form3.style.left="40px";
+        progress.style.width="360px";
+    }
+    back2.onclick=function(){
+        form2.style.left= "40px";
+        form3.style.left="-450px";
+        progress.style.width="240px";
+
+    }
+</script>
+
+    
+</body>
+</html>
